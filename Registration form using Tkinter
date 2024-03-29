@@ -1,0 +1,48 @@
+from tkinter import *
+root=Tk()
+root.geometry("500x300")
+
+def getvals():
+    print("Accepted")
+Label(root, text="Registration Form", font="arial 20 bold").grid(row=0, column=3)
+
+
+name=Label(root, text="Name", font="arial 15")
+phone=Label(root, text="Phone", font="arial 15")
+email=Label(root, text="EmailId", font="arial 15")
+rollno=Label(root, text="Roll No.", font="arial 15")
+password=Label(root, text="Password", font="arial 15")
+
+name.grid(row=1, column=2)
+phone.grid(row=2, column=2)
+email.grid(row=3, column=2)
+rollno.grid(row=4, column=2)
+password.grid(row=5, column=2)
+
+
+namevalue=StringVar
+phonevalue=StringVar
+emailvalue=StringVar
+rollnovalue=StringVar
+passwordvalue=StringVar
+checkvalue=IntVar
+
+nameentry=Entry(root, textvariable=namevalue)
+phoneentry=Entry(root, textvariable=phonevalue)
+emailentry=Entry(root, textvariable=emailvalue)
+rollnoentry=Entry(root, textvariable=rollnovalue)
+passwordentry=Entry(root, textvariable=passwordvalue)
+
+
+nameentry.grid(row=1, column=3)
+phoneentry.grid(row=2, column=3)
+emailentry.grid(row=3, column=3)
+rollnoentry.grid(row=4, column=3)
+passwordentry.grid(row=5, column=3)
+
+checkbtn=Checkbutton(text="Remember me?", variable=checkvalue)
+checkbtn.grid(row=6, column=3)
+
+Button(text="Submit", command=getvals).grid(row=7, column=3)
+
+root.mainloop()
